@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*{
+	box-sizing: border-box;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin:0; /*le sacamos los espaciados que tiene*/
+	background:#477EBE; 
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	letter-spacing: 
+}
+/* es un estilo general para los titulos*/
+.section_titulo{
+	text-align: center;
+	font-size: 40px;
+	color: #1B2B4C;
+}
+.contenedor{
+	margin:auto;
+	width: 99%;/*para que de un espacio entre toda la pagina*/
+}
+
+
+/*------------------------------------estilos del header------------------------------------*/
+
+.header{
+	height: 60px;
+	background: #477EBE;
+}
+.header .contenedor_header{
+	display: flex;/* para que se coloque uno al lado del otro*/
+	justify-content: space-between;/*para que se pongan uno en cada extremo la img y el icono*/
+	position: relative;
+}
+.header .contenedor_header img{
+	width: 50px;
+	height: 50px;
+}
+.logo , .icon-menu{
+	margin: 4px;
+}
+.contenedor_header h2{
+	color: white;
+	position: absolute;
+	top: 5px;
+	left: 60px;
+	font-size: 20px;
+
+}
+.icon-menu{
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	background: #1B2B4C;
+	color: white;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 5px;
+	margin-left: auto;/* para que lo empuje en toda la esquina en mozilla funciona*/
+	cursor: pointer;/*para que apareca la manito*/
+}
+/*----------------------------------estilos del nav----------------------------------*/
+.nav{
+	position: absolute;
+	top: 60px;
+	left: -100%;/* le damos menos 100% para que se corra y no se vea*/
+	width: 100%;
+	transition: 0.4s; /* transicion de 4 segundos*/
+}
+.menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu_link{
+	display: block;
+	padding: 15px;
+	background:#1B2B4C; 
+	text-decoration: none;
+	color: white;
+}
+.menu_link:hover {
+	background:white;
+	color:#1B2B4C;
+}
+.mostrar{
+	left: 0;/* creamos esta clase mostrar y le cancelmos el left poniendo cero para que se vea de nuevo.*/
+}
+.select{ /*creamos este select para que donde estamos en la pagina quede marcado en el nav sea en incio etc.*/
+	background:white;
+	color:#1B2B4C;
+}
+/*-------------------------------------estilos del banner-------------------------------------*/
+.banner {
+	margin-top: -60px;/*el nav se sale por que le restamos su tamaño*/
+	position: relative;
+	z-index: -1000;/* lo hacemos para hacer que el banner vaya atras del nav*/
+	margin-bottom: 15px;
+	background-color: rgba(0,0,0,0.4);
+}
+.banner .contenedor{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	/* centramos de los costados x y y verticalmente*/
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+.banner_text{
+	display: none;/*por que en el movil no se va aver*/
+}	
+
+.banner img {
+	width: 100%;
+}
+/*---------------------------------estilos de info---------------------------------*/
+
+.info_columna{
+	background: #1B2B4C;
+	color: white;
+	padding: 15px;/* para los costados */
+	margin-bottom: 20px;/*desde ariiba hacia abajo de cada div*/
+}
+
+/*---------------------------------estilos de cursos---------------------------------*/
+
+.cursos_columna{
+	position: relative;
+	margin-top: 30px;
+}
+.cursos_des{
+	position: absolute;
+	top:0;
+	left: 0;
+	color:white;
+	background:rgba(0,0,0,0.4);/*para intencidad*/
+	width: 60%;
+	height: 100%;
+	padding: 5px;
+
+}
+.cursos_titulo{
+	font-size: 25px;
+	margin:5px 0;
+}
+
+/*------------------------------------------Estilos del Footer------------------------------------------*/
+
+.footer{
+	background: grey;
+	color: white;
+	padding: 10px;
+	text-align: center;
+
+}
+.footer .social [class^="icon-"]{
+	margin:0 5px;
+	color: grey;
+	text-decoration: none;
+	font-size: 25px;
+	padding:10px;
+	background: white;
+	border-radius: 50%;
+	width: 50px;/* el widht y height no funcinan es una elemento en linea para eso  hay que hacer unu inline block 
+	para que fucione*/
+	height: 50px;
+	display: inline-block;
+	line-height:36px; /*para bajar el texto*/
+
+}
+
+/*------------------------------estilos responsive------------------------------*/
+@media(min-width: 480px){ /*tamaño de cel*/
+
+	.logo{
+		font-size: 50px;
+	}
+	.banner_titulo{
+		font-size: 30px;
+		margin:5px 0;
+	}
+	.banner_text{
+		display: block;
+		font-size: 20px;
+		margin:7px 0;
+	}
+	.info{
+		display: flex;/*es hace que las cajas sean fila horizontal*/
+		justify-content: space-between;/*espaciado entre cajas la anchura dep de el espacio sobrante*/
+		margin-top: -50px;/* se baja las cjas*/
+	}
+	.info_columna{
+		width: 32%;
+	}
+	.info_titulo{
+		font-size: 30px;
+		margin: 5px 0;
+	}
+	.section_titulo{
+		width: 100%;
+		margin:5px 0;
+	}
+	.cursos{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 0;
+		flex-wrap: wrap;
+	}
+
+	.cursos_columna{
+		width: 48%;/*se podria poner 50% pero 48 pars dejar un espcaio entre cajas*/
+	}
+	.cursos_des .cursos_text{
+		font-size: 12px;
+	} 
+	.footer .social [class^="icon-"]{
+		margin:0 10px;/*para separar los iconos */
+	}
+
+}
+/*----------------------tamaño de tablet------------------------------*/
+@media(min-width: 768px){
+	.contenedor_header h2{
+		font-size:25px;
+		top: 0px; 
+	}
+	.banner_titulo{
+		font-size: 50px;
+	}
+	.cursos_titulo{
+		font-size: 40px;
+	}
+	.cursos_des .cursos_text{
+		font-size: 18px;
+	}
+}
+
+/*----------------------tamaño de web------------------------------*/
+@media(min-width: 1024px){
+	.contenedor{
+		width: 1200px;
+	}
+	.nav{
+		position: static;/*para que vuelva a su pocision original*/
+		width: auto;/*para que sea un 100*/
+	}
+	.menu{
+		display: flex;
+	}
+	.menu_link{
+		background: none;
+		font-size: 20px;
+	}
+	.icon-menu{
+		display: none;/*por que ya no lo vamos a usar*/
+	}
+	.banner_titulo{
+		font-size: 80px;
+	}
+	.info_columna{
+		padding: 30px;
+	}
+	.info_titulo{
+		font-size: 40px;
+	}
+	.section_titulo{
+		font-size: 55px;
+	}
+	.banner_text {
+		font-size: 30px;
+	}
+	.cursos_titulo{
+		font-size: 40px;
+	}
+	.cursos_des{
+		padding: 20px;/*para acomodarlo y dejar un espcaio dentro de la caja*/
+	}
+	.cursos_des .cursos_text{
+		font-size: 26px;
+	}
+}
+
+/*----------------------tamaño de tele o mas------------------------------*/
+@media(min-width: 1280px){
+	.contendor{
+		width: 0px;
+	}
+	.banner .contendor{
+		top: 40%;
+	}
+	.info{
+		margin-top: -180px;
+	}
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Escuela Maipu</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<!--para agregar los iconos desde fontastic-->
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	</head>
+	<!--header.header>.contenedor>img.logo+span.icon-menu+nav.nav-->
+	<body>
+		<header class="header">
+			<div class="contenedor_header">
+				<a href="index.html" id="logo"><img src="img/icono4.png" alt="" class="logo"></a>
+				<h2>Escuela Técnica N° 15 Maipú</h2>
+				<span class="icon-menu" id="btn-menu"></span><!--hacemos id para el java-->
+				
+				<nav class="nav" id="nav"> <!--hacemos id para el java-->
+					<ul class="menu"> <!--agregamos select al menu para que quede marcado el nav donde estamos-->
+						<li class="menu_item"><a class="menu_link select" href="">Inicio</a></li>
+						<li class="menu_item"><a class="menu_link" href="">Especialidades</a></li>
+						<li class="menu_item"><a class="menu_link" href="">Docentes</a></li>
+						<li class="menu_item"><a class="menu_link" href="">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		 <!--.banner>img.banner_img+.contenedor>h2.banner_titulo+p.banner_text-->
+		<div class="banner">
+			<img src="img/img-escuela.jpg" alt="" class="banner_img">
+			<div class="contenedor">
+				<h2 class="banner_titulo">Diseña e Imprimi tus ideas!</h2>
+				<p class="banner_text">Estudia con nosotros y logra tus metas!</p>
+			</div>
+		</div>
+		<!-- para crear el section section.info>article.info_columna*3>img.info_img[src="img/img-7.jpg"]+h2.info_titulo{titulo $}+p.info_text>lorem15-->
+		<main class="main">
+			<div class="contenedor">
+				<section class="info">
+					<article class="info_columna">
+						<img src="img/img-2.jpg" alt="" class="info_img">
+						<h2 class="info_titulo">Inscripción</h2>
+						<p class="info_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nisi vitae adipisci animi inventore, repellendus.</p>
+					</article>
+					<article class="info_columna">
+						<img src="img/img-7.jpg" alt="" class="info_img">
+						<h2 class="info_titulo">Talleres</h2>
+						<p class="info_text">Excepturi nesciunt alias deserunt, laboriosam incidunt architecto vitae vel dolore eligendi nemo esse modi aut.</p>
+					</article>
+					<article class="info_columna">
+						<img src="img/img-19.jpg" alt="" class="info_img">
+						<h2 class="info_titulo">Novedades</h2>
+						<p class="info_text">Eneterate de la expo-Maipú y de las fechas de inscripcion.</p>
+					</article>
+				</section>
+				<!--section.cursos>h2.section_titulo+.cursos_columna*4>img.cursos_img[src="img/img-1.jpg"]+.cursos_des>h3.cursos_titulo+p.cursos_text>lorem10-->
+				<section class="cursos">
+					<h2 class="section_titulo">Nuestras Especialidades</h2>
+					<div class="cursos_columna">
+						<img src="img/img-1.jpg" alt="" class="cursos_img">
+						<div class="cursos_des">
+							<h3 class="cursos_titulo"> Artes Gráficas</h3>
+							<p class="cursos_text">Artes Gráficas cuenta con título oficial y dura seis años.
+							Se divide en Ciclo Básico y en Ciclo Superior.</p>
+						</div>
+					</div>
+					<div class="cursos_columna">
+						<img src="img/img-1.jpg" alt="" class="cursos_img">
+						<div class="cursos_des">
+							<h3 class="cursos_titulo">Publicidad</h3>
+							<p class="cursos_text">Publicidad tiene título oficial y dura seis años.
+							Se divide en Ciclo Básico y Ciclo Superior.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<!--.social>.icon-*4^p.copy para agregar los iconos-->
+			<div class="social">
+				<a href="https://www.facebook.com/pg/Escuela-T%C3%A9cnica-N%C2%BA-15-Maip%C3%BA-DE-5-1620951301515261/photos/?ref=page_internal" class="icon-facebook" target="_blank"></a>
+				<a href="#" class="icon-twitter"></a>
+				<a href="#" class="icon-gplus"></a>
+				<a href="https://www.instagram.com/explore/locations/986046387/escuela-tecnica-no-15-maipu-de-5/" class="icon-instagram"></a>
+			</div>
+			<p class="copy">&copy; Luis Prado 2018 - Todos los derechos reservados</p>
+		</footer>
+		<script src="js/estilos.js"></script>
+	</body>
+</html>
